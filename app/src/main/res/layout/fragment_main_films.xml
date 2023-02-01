@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainFilmsFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBarMain"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_films_fragment">
+
+            <TextView
+                android:id="@+id/nameFilm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textSize="@dimen/name_film_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/posterFilm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Movie title" />
+
+            <ImageView
+                android:id="@+id/posterFilm"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_films_fragment"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/nameFilm"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/puss_in_boots2" />
+
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_films_fragment"
+                android:text="@string/genre"
+                android:textSize="@dimen/genre_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameFilm" />
+
+            <TextView
+                android:id="@+id/genreFilm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/genre_text_size"
+                app:layout_constraintBaseline_toBaselineOf="@+id/genre"
+                app:layout_constraintEnd_toStartOf="@id/posterFilm"
+                app:layout_constraintStart_toEndOf="@id/genre"
+                tools:text="Fantasy" />
+
+            <ImageView
+                android:id="@+id/iconYearFilm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_films_fragment"
+                android:src="@drawable/icon_year_film"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genre" />
+
+            <TextView
+                android:id="@+id/yearFilmInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_films_fragment"
+                android:textSize="@dimen/genre_text_size"
+                app:layout_constraintStart_toEndOf="@id/iconYearFilm"
+                app:layout_constraintTop_toTopOf="@id/iconYearFilm"
+                tools:text="2022" />
+
+            <ImageView
+                android:id="@+id/iconDurationFilm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_films_fragment"
+                android:src="@drawable/icon_duration_film"
+                app:layout_constraintStart_toEndOf="@id/yearFilmInfo"
+                app:layout_constraintTop_toTopOf="@id/yearFilmInfo" />
+
+            <TextView
+                android:id="@+id/durationFilm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_films_fragment"
+                android:textSize="@dimen/genre_text_size"
+                app:layout_constraintStart_toEndOf="@id/iconDurationFilm"
+                app:layout_constraintTop_toTopOf="@id/iconDurationFilm"
+                tools:text="2 hours 17 minutes" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/titleSectionBarrier"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="nameFilm, posterFilm, genre, genreFilm, iconYearFilm, iconDurationFilm, yearFilmInfo, durationFilm" />
+
+            <TextView
+                android:id="@+id/annotationFilm"
+                tools:text="@string/puss_in_boots_annotation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/annotation_film_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleSectionBarrier"
+                android:layout_marginStart="@dimen/margin_films_fragment"
+                android:layout_marginTop="@dimen/margin_films_fragment"
+                android:layout_marginEnd="@dimen/margin_films_fragment"/>
+
+            <ImageView
+                android:id="@+id/iconDirectorFilm"
+                android:src="@drawable/icon_director_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/annotationFilm"
+                android:layout_marginTop="@dimen/margin_films_fragment"
+                android:layout_marginStart="@dimen/margin_films_fragment"/>
+
+            <TextView
+                android:id="@+id/directorFilm"
+                android:text="@string/director"
+                android:textStyle="bold"
+                android:textSize="@dimen/genre_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/iconDirectorFilm"
+                app:layout_constraintTop_toTopOf="@id/iconDirectorFilm"
+                android:layout_marginStart="@dimen/margin_films_fragment"/>
+
+            <TextView
+                android:id="@+id/directorFilmName"
+                tools:text="Joel Crawford, Hanuel Mercado"
+                android:textSize="@dimen/directorFilmName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/iconDirectorFilm"
+                app:layout_constraintTop_toBottomOf="@id/iconDirectorFilm"/>
+
+            <ImageView
+                android:id="@+id/iconActors"
+                android:src="@drawable/icon_actors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/directorFilmName"
+                android:layout_marginStart="@dimen/margin_films_fragment"
+                android:layout_marginTop="@dimen/margin_films_fragment"/>
+
+            <TextView
+                android:id="@+id/actorsLabel"
+                android:text="@string/actors"
+                android:textStyle="bold"
+                android:textSize="@dimen/genre_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/iconActors"
+                app:layout_constraintTop_toTopOf="@id/iconActors"
+                android:layout_marginStart="@dimen/margin_films_fragment"/>
+
+            <TextView
+                android:id="@+id/actorsFilmInfo"
+                tools:text="Antonio Banderas, Salma Hayek, Harvey Guillen, Florence Pugh, John Mulaney, Wagner Moura, Ray Winston, Samson Kayo, Olivia Colman, Davine Joy Randolph"
+                android:textSize="@dimen/directorFilmName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/iconActors"
+                app:layout_constraintTop_toBottomOf="@id/iconActors"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginStart="@dimen/margin_films_fragment"
+                android:layout_marginEnd="@dimen/margin_films_fragment"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

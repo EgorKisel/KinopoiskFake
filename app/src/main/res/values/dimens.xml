@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_films_fragment">16dp</dimen>
+    <dimen name="name_film_text_size">22sp</dimen>
+    <dimen name="genre_text_size">18sp</dimen>
+    <dimen name="annotation_film_text_size">14sp</dimen>
+    <dimen name="directorFilmName">16sp</dimen>
+</resources>
