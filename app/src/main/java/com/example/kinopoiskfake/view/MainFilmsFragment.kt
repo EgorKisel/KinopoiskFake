@@ -55,7 +55,7 @@ class MainFilmsFragment : Fragment() {
         binding.posterFilm.setImageResource(filmData.film.poster)
         binding.yearFilmInfo.text = filmData.film.year.toString()
         binding.durationFilm.text = filmData.film.getDurationFilmInString(filmData.film.duration)
-        binding.annotationFilm.text = filmData.filmAnnotation.toString()
+        binding.annotationFilm.setText(filmData.filmAnnotation)
         binding.directorFilmName.text = filmData.director
         binding.actorsFilmInfo.text = filmData.actors
     }
