@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.kinopoiskfake.R
 import com.example.kinopoiskfake.databinding.FragmentMainFilmsBinding
 import com.example.kinopoiskfake.model.FilmInfo
 import com.example.kinopoiskfake.viewmodel.AppState
