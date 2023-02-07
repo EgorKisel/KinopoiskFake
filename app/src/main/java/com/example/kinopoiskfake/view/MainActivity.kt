@@ -3,6 +3,7 @@ package com.example.kinopoiskfake.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kinopoiskfake.R
+import com.example.kinopoiskfake.view.filminfo.MainFilmsFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

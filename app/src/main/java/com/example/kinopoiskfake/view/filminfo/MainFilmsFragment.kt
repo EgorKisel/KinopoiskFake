@@ -1,4 +1,4 @@
-package com.example.kinopoiskfake.view
+package com.example.kinopoiskfake.view.filminfo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -28,7 +28,7 @@ class MainFilmsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        val observer = object: Observer<AppState> {
+        val observer = object : Observer<AppState> {
             override fun onChanged(data: AppState) {
                 renderData(data)
             }
@@ -60,8 +60,14 @@ class MainFilmsFragment : Fragment() {
     }
 
     companion object {
+        const val BUNDLE_EXTRA = "filmInfo"
+
         @JvmStatic
-        fun newInstance() = MainFilmsFragment()
+        fun newInstance(bundle: Bundle): MainFilmsFragment {
+            val fragment = MainFilmsFragment()
+            fragment.arguments = bundle
+            return fragment
+        }
     }
 
     override fun onDestroy() {

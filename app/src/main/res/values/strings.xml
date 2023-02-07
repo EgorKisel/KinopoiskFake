@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">KinopoiskFake</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="genre">Genre</string>
     <string name="puss_in_boots_annotation">Having squandered eight lives out of nine and scared to death of a bounty hunter wolf who came after him, Puss in Boots heeds the advice of a doctor and moves into the house of a local cat lady. There he resigns himself to the established order, grows a beard and loses his craving for exploits and adventures, but only until he learns about a magic map that points the way to a fallen Wish Star somewhere. Puss in Boots is determined to find the Star in order to get his life back, and in the company of a dog pretending to be a cat, he goes to steal a map from the famous collector of magical items, Jack Horner.</string>
     <string name="director">Director</string>
     <string name="actors">Actors</string>
+    <string name="hits_title_main_fragment">Hits that have stood the test of time</string>
+    <string name="novelties_title_main_fragment">Now in cinemas</string>
 </resources>
