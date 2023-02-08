@@ -19,7 +19,8 @@ class MainViewModel(
         Thread {
             liveData.postValue(AppState.Loading)
             sleep(2000L)
-            liveData.postValue(AppState.Success(repository.getFilmsFromLocalStorage()))
+            liveData.postValue(AppState.Success(repository.getFilmInfoFromLocalStorageNovelties(),
+                repository.getFilmInfoFromLocalStorageHits()))
         }.start()
     }
 }

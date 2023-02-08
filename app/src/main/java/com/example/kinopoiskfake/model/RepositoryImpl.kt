@@ -5,7 +5,6 @@ class RepositoryImpl: Repository {
         return FilmInfo()
     }
 
-    override fun getFilmsFromLocalStorage(): FilmInfo {
-        return FilmInfo()
-    }
+    override fun getFilmInfoFromLocalStorageNovelties() = getNoveltiesFilms()
+    override fun getFilmInfoFromLocalStorageHits() = getHitsFilms()
 }

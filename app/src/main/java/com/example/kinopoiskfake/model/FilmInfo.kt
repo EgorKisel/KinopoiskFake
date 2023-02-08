@@ -21,19 +21,19 @@ fun getDefaultFilm() = Film(
 )
 
 fun getNoveltiesFilms() = listOf(
-    FilmInfo(Film(R.drawable.Cinderella, "Cinderella", "fantasy, drama", 105, 2015)),
-    FilmInfo(Film(R.drawable.Downton_Abbey,"Downton Abbey", "drama, melodrama", 122, 2019)),
-    FilmInfo(Film(R.drawable.Generation_П, "Generation П", "fantasy, drama, comedy", 120, 2011)),
-    FilmInfo(Film(R.drawable.Hummingbird, "Hummingbird","thriller, drama, crime, action", 100, 2012)),
-    FilmInfo(Film(R.drawable.Nobody, "Nobody", "action, thriller, crime", 92, 2021))
+    FilmInfo(Film(R.drawable.puss_in_boots2, "Cinderella", "fantasy, drama", 105, 2015)),
+    FilmInfo(Film(R.drawable.puss_in_boots2,"Downton Abbey", "drama, melodrama", 122, 2019)),
+    FilmInfo(Film(R.drawable.puss_in_boots2, "Generation П", "fantasy, drama, comedy", 120, 2011)),
+    FilmInfo(Film(R.drawable.puss_in_boots2, "Hummingbird","thriller, drama, crime, action", 100, 2012)),
+    FilmInfo(Film(R.drawable.puss_in_boots2, "Nobody", "action, thriller, crime", 92, 2021))
 )
 
 fun getHitsFilms() = listOf(
-    FilmInfo(Film(R.drawable.Quo_vado, "Quo vado?","comedy", 86, 2015)),
-    FilmInfo(Film(R.drawable.She_is_the_Man, "She's the Man", "melodrama, comedy, sports", 105, 2005)),
-    FilmInfo(Film(R.drawable.The_Father, "The Father","drama", 97, 2020)),
-    FilmInfo(Film(R.drawable.Widows, "Widows","thriller, drama, crime", 129, 2018)),
-    FilmInfo(Film(R.drawable.The_Physician, "The_Physician","adventure, history, drama", 155, 2013))
+    FilmInfo(Film(R.drawable.puss_in_boots2, "Quo vado?","comedy", 86, 2015)),
+    FilmInfo(Film(R.drawable.puss_in_boots2, "She's the Man", "melodrama, comedy, sports", 105, 2005)),
+    FilmInfo(Film(R.drawable.puss_in_boots2, "The Father","drama", 97, 2020)),
+    FilmInfo(Film(R.drawable.puss_in_boots2, "Widows","thriller, drama, crime", 129, 2018)),
+    FilmInfo(Film(R.drawable.puss_in_boots2, "The_Physician","adventure, history, drama", 155, 2013))
 )
 
 @Parcelize

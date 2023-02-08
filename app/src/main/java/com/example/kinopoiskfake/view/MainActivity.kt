@@ -1,9 +1,9 @@
 package com.example.kinopoiskfake.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.kinopoiskfake.R
-import com.example.kinopoiskfake.view.filminfo.MainFilmsFragment
+import com.example.kinopoiskfake.view.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFilmsFragment.newInstance()).commit()
+                .replace(R.id.container, MainFragment.newInstance()).commit()
         }
     }
 }

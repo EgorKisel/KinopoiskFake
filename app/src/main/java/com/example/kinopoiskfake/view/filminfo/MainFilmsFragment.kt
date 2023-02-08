@@ -27,37 +27,24 @@ class MainFilmsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        val observer = object : Observer<AppState> {
-            override fun onChanged(data: AppState) {
-                renderData(data)
-            }
+
+        val filmInfo = arguments?.getParcelable<FilmInfo>(BUNDLE_EXTRA)
+
+        filmInfo?.also {
+            binding.nameFilm.text = it.film.name
+            binding.genreFilm.text = it.film.genre
+            binding.posterFilm.setImageResource(it.film.poster)
+            binding.yearFilmInfo.text = it.film.year.toString()
+            binding.durationFilm.text = it.film.getDurationFilmInString(it.film.duration)
+            binding.annotationFilm.text = it.filmAnnotation.toString()
+            binding.directorFilmName.text = it.director
+            binding.actorsFilmInfo.text = it.actors
         }
-        viewModel.getLiveData().observe(viewLifecycleOwner, observer)
-        viewModel.getFilmInfo()
+
+
     }
 
-    private fun renderData(appState: AppState) {
-        when (appState) {
-            is AppState.Error -> binding.progressBarMain.visibility = View.GONE
-            is AppState.Loading -> binding.progressBarMain.visibility = View.VISIBLE
-            is AppState.Success -> {
-                binding.progressBarMain.visibility = View.GONE
-                setData(appState.filmData)
-            }
-        }
-    }
 
-    private fun setData(filmData: FilmInfo) {
-        binding.nameFilm.text = filmData.film.name
-        binding.genreFilm.text = filmData.film.genre
-        binding.posterFilm.setImageResource(filmData.film.poster)
-        binding.yearFilmInfo.text = filmData.film.year.toString()
-        binding.durationFilm.text = filmData.film.getDurationFilmInString(filmData.film.duration)
-        binding.annotationFilm.setText(filmData.filmAnnotation)
-        binding.directorFilmName.text = filmData.director
-        binding.actorsFilmInfo.text = filmData.actors
-    }
 
     companion object {
         const val BUNDLE_EXTRA = "filmInfo"
