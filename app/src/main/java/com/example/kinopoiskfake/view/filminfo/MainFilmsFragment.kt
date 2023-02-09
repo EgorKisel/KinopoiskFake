@@ -1,16 +1,12 @@
 package com.example.kinopoiskfake.view.filminfo
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.Fragment
 import com.example.kinopoiskfake.databinding.FragmentMainFilmsBinding
 import com.example.kinopoiskfake.model.FilmInfo
-import com.example.kinopoiskfake.viewmodel.AppState
-import com.example.kinopoiskfake.viewmodel.MainViewModel
 
 class MainFilmsFragment : Fragment() {
 
@@ -40,11 +36,7 @@ class MainFilmsFragment : Fragment() {
             binding.directorFilmName.text = it.director
             binding.actorsFilmInfo.text = it.actors
         }
-
-
     }
-
-
 
     companion object {
         const val BUNDLE_EXTRA = "filmInfo"
